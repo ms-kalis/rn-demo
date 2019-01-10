@@ -1,21 +1,21 @@
-import { createStackNavigator } from "react-navigation";
+import { createStackNavigator } from 'react-navigation';
 
-import AppNavigator from './app'
-import ModalScreen from '../components/common/modal'
+import AppNavigator from './app';
+import ModalScreen from '../components/common/modal';
 
 const ModalStack = createStackNavigator(
   {
     Main: {
-      screen: AppNavigator,
+      screen: AppNavigator
     },
     MyModal: {
-      screen: ModalScreen,
-    },
+      screen: ModalScreen
+    }
   },
   {
     mode: 'modal',
-    headerMode: 'none',
+    headerMode: 'none'
   }
 );
 
-export default ModalStack
+export default ModalStack;

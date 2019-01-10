@@ -1,10 +1,11 @@
 import React from 'react';
-import { View, Text, Button } from "react-native";
+import { View, Text, Button } from 'react-native';
 
 export default class DetailsScreen extends React.Component {
   static navigationOptions = {
-    title: 'Details',
+    title: 'Details'
   };
+
   render() {
     /* 2. Get the param, provide a fallback value if not available */
     const { navigation } = this.props;
@@ -19,18 +20,13 @@ export default class DetailsScreen extends React.Component {
         <Button
           title="Go to Details... again"
           onPress={() =>
-            this.props.navigation.push('Details', {
-              itemId: Math.floor(Math.random() * 100),
-            })}
+            navigation.push('Details', {
+              itemId: Math.floor(Math.random() * 100)
+            })
+          }
         />
-        <Button
-          title="Go to Home"
-          onPress={() => this.props.navigation.navigate('Home')}
-        />
-        <Button
-          title="Go back"
-          onPress={() => this.props.navigation.goBack()}
-        />
+        <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
+        <Button title="Go back" onPress={() => navigation.goBack()} />
       </View>
     );
   }
