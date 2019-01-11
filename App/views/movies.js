@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Image, FlatList, StyleSheet, Text, View, Button } from 'react-native';
 
 /**
@@ -37,13 +37,35 @@ const styles = StyleSheet.create({
   }
 });
 
-export default class HelloWorldApp extends Component {
+function renderLoadingView() {
+  return (
+    <View style={styles.container}>
+      <Text>正在加载电影数据……</Text>
+    </View>
+  );
+}
+
+function renderMovie({ item }) {
+  // { item }是一种“解构”写法，请阅读ES2015语法的相关文档
+  // item也是FlatList中固定的参数名，请阅读FlatList的相关文档
+  return (
+    <View style={styles.container}>
+      <Image source={{ uri: item.posters.thumbnail }} style={styles.thumbnail} />
+      <View style={styles.rightContainer}>
+        <Text style={styles.title}>{item.title}</Text>
+        <Text style={styles.year}>{item.year}</Text>
+      </View>
+    </View>
+  );
+}
+
+export default class MoviesScreen extends React.Component {
   static navigationOptions = {
     title: 'Movies'
   };
 
   constructor(props) {
-    super(props); // 这一句不能省略，照抄即可
+    super(props);
     this.state = {
       data: [],
       loaded: false
@@ -70,34 +92,12 @@ export default class HelloWorldApp extends Component {
       });
   }
 
-  static renderLoadingView() {
-    return (
-      <View style={styles.container}>
-        <Text>正在加载电影数据……</Text>
-      </View>
-    );
-  }
-
-  static renderMovie({ item }) {
-    // { item }是一种“解构”写法，请阅读ES2015语法的相关文档
-    // item也是FlatList中固定的参数名，请阅读FlatList的相关文档
-    return (
-      <View style={styles.container}>
-        <Image source={{ uri: item.posters.thumbnail }} style={styles.thumbnail} />
-        <View style={styles.rightContainer}>
-          <Text style={styles.title}>{item.title}</Text>
-          <Text style={styles.year}>{item.year}</Text>
-        </View>
-      </View>
-    );
-  }
-
   render() {
     const { loaded, data } = this.state;
     const { navigation } = this.props;
 
     if (!loaded) {
-      return this.renderLoadingView();
+      return renderLoadingView();
     }
 
     return (
@@ -106,7 +106,7 @@ export default class HelloWorldApp extends Component {
         <Button title="Go to Details... again" onPress={() => navigation.push('Details')} />
         <Button title="Go to Hello" onPress={() => navigation.navigate('Hello')} />
         <Button title="Go back" onPress={() => navigation.goBack()} />
-        <FlatList data={data} renderItem={this.renderMovie} style={styles.list} />
+        <FlatList data={data} renderItem={renderMovie} style={styles.list} />
       </View>
     );
   }

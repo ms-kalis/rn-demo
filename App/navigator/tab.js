@@ -3,12 +3,12 @@ import { createBottomTabNavigator } from 'react-navigation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import ModalStack from './modal';
-import SettingsScreen from '../views/user/settings';
+import WebViewNavigator from './webView';
 
 const TabNavigator = createBottomTabNavigator(
   {
     Home: ModalStack,
-    Settings: SettingsScreen
+    WebView: WebViewNavigator
   },
   {
     initialRouteName: 'Home',

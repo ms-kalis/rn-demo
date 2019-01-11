@@ -22,7 +22,8 @@ class HomeScreen extends React.Component {
     count: 0
   };
 
-  componentDidMount() {
+  constructor(props) {
+    super(props);
     const { navigation } = this.props;
     navigation.setParams({ increaseCount: this.increaseCount });
   }
