@@ -44,21 +44,6 @@ public class PushModule extends ReactContextBaseJavaModule {
         super(reactContext);
         context = reactContext;
         mPushAgent = PushAgent.getInstance(context);
-        //获取消息推送代理示例
-        //注册推送服务，每次调用register方法都会回调该接口
-        mPushAgent.register(new IUmengRegisterCallback() {
-            @Override
-            public void onSuccess(String deviceToken) {
-                //注册成功会返回deviceToken deviceToken是推送消息的唯一标志
-                // Log.i(TAG,"注册成功：deviceToken：-------->  " + deviceToken);
-                deviceTokens = deviceToken;
-            }
-            @Override
-            public void onFailure(String s, String s1) {
-                // Log.e(TAG,"注册失败：-------->  " + "s:" + s + ",s1:" + s1);
-                deviceTokens = s + s1;
-            }
-        });
     }
 
     public static void initPushSDK(Activity activity) {

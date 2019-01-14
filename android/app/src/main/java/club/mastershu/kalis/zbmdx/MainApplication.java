@@ -19,7 +19,7 @@ import com.umeng.socialize.PlatformConfig;
 import java.util.Arrays;
 import java.util.List;
 
-import club.mastershu.kalis.zbmdx.BuildConfig;
+//import club.mastershu.kalis.zbmdx.BuildConfig;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -56,6 +56,7 @@ public class MainApplication extends Application implements ReactApplication {
   public void onCreate() {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
+      UMConfigure.setLogEnabled(true); // 上线前注释
       RNUMConfigure.init(this, "5c3830b4f1f5568110000c08", "Umeng", UMConfigure.DEVICE_TYPE_PHONE,
           "834bd9fbb5725ba660d76f4076498ef7");
   }

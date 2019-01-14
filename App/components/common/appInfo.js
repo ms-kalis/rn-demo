@@ -16,7 +16,12 @@ class AppInfo extends React.Component {
     appinfo: ''
   };
 
-  componentDidMount() {}
+  componentDidMount() {
+    setTimeout(() => {
+      this.bootstrapAsync();
+      PushUtil.addAliasType();
+    }, 1000);
+  }
 
   bootstrapAsync = async () => {
     const appInfo001 = await PushUtil.appInfo();

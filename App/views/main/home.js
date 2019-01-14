@@ -42,6 +42,7 @@ class HomeScreen extends React.Component {
         <Button title="Go to Movies" onPress={() => navigation.navigate('Movies')} />
         <Button title="Update the title" onPress={() => navigation.setParams({ otherParam: 'Updated!' })} />
         <Button title="get appinfo" onPress={() => navigation.navigate('AppInfo')} />
+        <Button title="get appinfo" onPress={() => navigation.navigate('WeiXinAuth')} />
       </View>
     );
   }
