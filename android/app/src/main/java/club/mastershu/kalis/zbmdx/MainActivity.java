@@ -29,8 +29,8 @@ public class MainActivity extends ReactActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // SplashScreen.show(this);
-        SplashScreen.show(this, R.style.SplashScreenTheme);
         super.onCreate(savedInstanceState);
+        SplashScreen.show(this, R.style.SplashScreenTheme);
         MobclickAgent.setSessionContinueMillis(1000);
         PushModule.initPushSDK(this);
         PushAgent.getInstance(this).onAppStart();
