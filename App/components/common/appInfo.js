@@ -7,11 +7,6 @@ import PushUtil from '../../natives/PushUtil';
 // }
 
 class AppInfo extends React.Component {
-  constructor(props) {
-    super(props);
-    // this.bootstrapAsync();
-  }
-
   state = {
     appinfo: ''
   };

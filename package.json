@@ -9,13 +9,14 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "pretty-quick --staged"
     }
   },
   "lint-staged": {
-    "*.js": [
-      "yarn lint",
-      "git commit"
+    "App/**/*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
     ]
   },
   "dependencies": {

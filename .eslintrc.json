@@ -6,14 +6,6 @@
     "__DEV__": true,
     "fetch": true
   },
-  "settings": {
-    "import/parser": "babel-eslint",
-    "import/resolver": {
-      "node": {
-        "moduleDirectory": ["node_modules", "src"]
-      }
-    }
-  },
   "rules": {
     "react/jsx-filename-extension": "off",
     "react/prop-types": [
