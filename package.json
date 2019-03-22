@@ -24,12 +24,8 @@
     "react-native": "0.59.1",
     "react-native-gesture-handler": "^1.0.12",
     "react-native-rtmpview": "^1.0.21",
-<<<<<<< HEAD
-    "react-native-splash-screen": "^3.1.1",
     "react-native-update": "^5.1.4",
-=======
     "react-native-splash-screen": "^3.2.0",
->>>>>>> 4e2eb8123842e635a92c23089987bf0089223302
     "react-native-vector-icons": "^6.1.0",
     "react-native-video": "^4.4.0",
     "react-native-webview": "^5.4.2",
