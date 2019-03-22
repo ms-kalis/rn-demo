@@ -1,0 +1,37 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["airbnb", "prettier", "plugin:prettier/recommended"],
+  "plugins": ["react", "prettier"],
+  "globals": {
+    "__DEV__": true,
+    "fetch": true
+  },
+  "rules": {
+    "react/jsx-filename-extension": "off",
+    "react/prop-types": [
+      0,
+      "error",
+      {
+        "ignore": ["navigation"]
+      }
+    ],
+    "react/require-default-props": ["off", { "forbidDefaultForRequired": false }],
+    "react/forbid-prop-types": [
+      "error",
+      {
+        "forbid": [],
+        "checkContextTypes": false,
+        "checkChildContextTypes": false
+      }
+    ],
+    "react/jsx-one-expression-per-line": 0,
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true,
+        "optionalDependencies": false,
+        "peerDependencies": false
+      }
+    ]
+  }
+}
