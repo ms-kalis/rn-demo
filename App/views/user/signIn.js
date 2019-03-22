@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Button, StyleSheet, AsyncStorage } from 'react-native';
+import { View, Button, StyleSheet } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 
 const styles = StyleSheet.create({
   container: {

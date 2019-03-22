@@ -7,6 +7,7 @@ import android.util.Log;
 import club.mastershu.kalis.zbmdx.invokenative.DplusReactPackage;
 import club.mastershu.kalis.zbmdx.invokenative.RNUMConfigure;
 import com.facebook.react.ReactApplication;
+import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import cn.reactnative.modules.update.UpdatePackage;
 import cn.reactnative.modules.update.UpdateContext;
 import com.brentvatne.react.ReactVideoPackage;
@@ -46,6 +47,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new AsyncStoragePackage(),
             new UpdatePackage(),
             new ReactVideoPackage(),
             new RNRtmpViewPackage(),
