@@ -4,8 +4,6 @@ import SplashScreen from 'react-native-splash-screen';
 import configureStore from './store';
 import Navigator from './navigator';
 
-import('../ReactotronConfig');
-
 const store = configureStore();
 
 export default class AppContainer extends Component {
