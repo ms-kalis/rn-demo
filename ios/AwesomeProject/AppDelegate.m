@@ -7,6 +7,7 @@
 
 #import "AppDelegate.h"
 #import <RCTJPushModule.h>
+#import "RCTHotUpdate.h"
 #ifdef NSFoundationVersionNumber_iOS_9_x_Max
 #import <UserNotifications/UserNotifications.h>
 #endif
@@ -71,6 +72,13 @@
     jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
   #else
     jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+  #endif
+
+  #if DEBUG
+    // 原来的jsCodeLocation保留在这里
+  #else
+    // 非DEBUG情况下启用热更新
+    jsCodeLocation=[RCTHotUpdate bundleURL];
   #endif
 
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation

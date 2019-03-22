@@ -7,6 +7,8 @@ import android.util.Log;
 import club.mastershu.kalis.zbmdx.invokenative.DplusReactPackage;
 import club.mastershu.kalis.zbmdx.invokenative.RNUMConfigure;
 import com.facebook.react.ReactApplication;
+import cn.reactnative.modules.update.UpdatePackage;
+import cn.reactnative.modules.update.UpdateContext;
 import com.brentvatne.react.ReactVideoPackage;
 import com.reactnativecommunity.webview.RNCWebViewPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
@@ -44,6 +46,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new UpdatePackage(),
             new ReactVideoPackage(),
             new RNRtmpViewPackage(),
             new DplusReactPackage(),
@@ -52,6 +55,11 @@ public class MainApplication extends Application implements ReactApplication {
             new RNGestureHandlerPackage(),
             new SplashScreenReactPackage()
       );
+    }
+
+    @Override
+    protected String getJSBundleFile() {
+        return UpdateContext.getBundleUrl(MainApplication.this);
     }
 
     @Override
