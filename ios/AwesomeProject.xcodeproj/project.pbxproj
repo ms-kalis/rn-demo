@@ -58,6 +58,7 @@
 		97E8A80D59FA4258BF1745AF /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BABEF63C3304E2A83D3D16E /* Zocial.ttf */; };
 		CAE1D3AAFCDF490BBB95EBCD /* libRCTJCoreModule.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32AEDBD6EEEA47818453573F /* libRCTJCoreModule.a */; };
 		A8DBA88A395A44099AA118C6 /* libRNCWebView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A020036F13E741B5A0CD9CF8 /* libRNCWebView.a */; };
+		9893D25BB3254BC7AEECA5D2 /* libRCTVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09EE6F225E514412BC4D7DE4 /* libRCTVideo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -389,6 +390,8 @@
 		32AEDBD6EEEA47818453573F /* libRCTJCoreModule.a */ = {isa = PBXFileReference; name = "libRCTJCoreModule.a"; path = "libRCTJCoreModule.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		2DBA351A36814A30A874382D /* RNCWebView.xcodeproj */ = {isa = PBXFileReference; name = "RNCWebView.xcodeproj"; path = "../node_modules/react-native-webview/ios/RNCWebView.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		A020036F13E741B5A0CD9CF8 /* libRNCWebView.a */ = {isa = PBXFileReference; name = "libRNCWebView.a"; path = "libRNCWebView.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		D0E33C1F02DE430EBA0D48F0 /* RCTVideo.xcodeproj */ = {isa = PBXFileReference; name = "RCTVideo.xcodeproj"; path = "../node_modules/react-native-video/ios/RCTVideo.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		09EE6F225E514412BC4D7DE4 /* libRCTVideo.a */ = {isa = PBXFileReference; name = "libRCTVideo.a"; path = "libRCTVideo.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -421,6 +424,7 @@
 				4E5B1E0F65B34A4ABCC949F0 /* libRNVectorIcons.a in Frameworks */,
 				CAE1D3AAFCDF490BBB95EBCD /* libRCTJCoreModule.a in Frameworks */,
 				A8DBA88A395A44099AA118C6 /* libRNCWebView.a in Frameworks */,
+				9893D25BB3254BC7AEECA5D2 /* libRCTVideo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,6 +617,7 @@
 				A302F6E698E54B8989848DCB /* RNVectorIcons.xcodeproj */,
 				7713B9818F9B4E88A7889E05 /* RCTJCoreModule.xcodeproj */,
 				2DBA351A36814A30A874382D /* RNCWebView.xcodeproj */,
+				D0E33C1F02DE430EBA0D48F0 /* RCTVideo.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1279,6 +1284,7 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AwesomeProject.app/AwesomeProject";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1287,6 +1293,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\jcore-react-native\ios\RCTJCoreModule",
 					"$(SRCROOT)\..\node_modules\react-native-webview\ios",
+					"$(SRCROOT)\..\node_modules\react-native-video\ios/**",
 				);
 			};
 			name = Debug;
@@ -1308,6 +1315,7 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AwesomeProject.app/AwesomeProject";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1316,6 +1324,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\jcore-react-native\ios\RCTJCoreModule",
 					"$(SRCROOT)\..\node_modules\react-native-webview\ios",
+					"$(SRCROOT)\..\node_modules\react-native-video\ios/**",
 				);
 			};
 			name = Release;
@@ -1343,6 +1352,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\jcore-react-native\ios\RCTJCoreModule",
 					"$(SRCROOT)\..\node_modules\react-native-webview\ios",
+					"$(SRCROOT)\..\node_modules\react-native-video\ios/**",
 				);
 			};
 			name = Debug;
@@ -1369,6 +1379,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\jcore-react-native\ios\RCTJCoreModule",
 					"$(SRCROOT)\..\node_modules\react-native-webview\ios",
+					"$(SRCROOT)\..\node_modules\react-native-video\ios/**",
 				);
 			};
 			name = Release;
@@ -1398,6 +1409,7 @@
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1406,6 +1418,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\jcore-react-native\ios\RCTJCoreModule",
 					"$(SRCROOT)\..\node_modules\react-native-webview\ios",
+					"$(SRCROOT)\..\node_modules\react-native-video\ios/**",
 				);
 			};
 			name = Debug;
@@ -1435,6 +1448,7 @@
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1443,6 +1457,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\jcore-react-native\ios\RCTJCoreModule",
 					"$(SRCROOT)\..\node_modules\react-native-webview\ios",
+					"$(SRCROOT)\..\node_modules\react-native-video\ios/**",
 				);
 			};
 			name = Release;
@@ -1471,6 +1486,7 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1479,6 +1495,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\jcore-react-native\ios\RCTJCoreModule",
 					"$(SRCROOT)\..\node_modules\react-native-webview\ios",
+					"$(SRCROOT)\..\node_modules\react-native-video\ios/**",
 				);
 			};
 			name = Debug;
@@ -1507,6 +1524,7 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1515,6 +1533,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\jcore-react-native\ios\RCTJCoreModule",
 					"$(SRCROOT)\..\node_modules\react-native-webview\ios",
+					"$(SRCROOT)\..\node_modules\react-native-video\ios/**",
 				);
 			};
 			name = Release;

@@ -4060,6 +4060,11 @@ jsx-ast-utils@^2.0.1:
   dependencies:
     array-includes "^3.0.3"
 
+keymirror@0.1.1:
+  version "0.1.1"
+  resolved "http://registry.npm.taobao.org/keymirror/download/keymirror-0.1.1.tgz#918889ea13f8d0a42e7c557250eee713adc95c35"
+  integrity sha1-kYiJ6hP40KQufFVyUO7nE63JXDU=
+
 kind-of@^1.1.0:
   version "1.1.0"
   resolved "http://registry.npm.taobao.org/kind-of/download/kind-of-1.1.0.tgz#140a3d2d41a36d2efcfa9377b62c24f8495a5c44"
@@ -5594,6 +5599,13 @@ react-native-gesture-handler@^1.0.0, react-native-gesture-handler@^1.0.12:
     invariant "^2.2.2"
     prop-types "^15.5.10"
 
+react-native-rtmpview@^1.0.21:
+  version "1.0.21"
+  resolved "http://registry.npm.taobao.org/react-native-rtmpview/download/react-native-rtmpview-1.0.21.tgz#f93cd8755e9450b2e11bd99952da03f9465a092a"
+  integrity sha1-+TzYdV6UULLhG9mZUtoD+UZaCSo=
+  dependencies:
+    prop-types "^15.6.1"
+
 react-native-safe-area-view@^0.11.0:
   version "0.11.0"
   resolved "http://registry.npm.taobao.org/react-native-safe-area-view/download/react-native-safe-area-view-0.11.0.tgz#4f3dda43c2bace37965e7c6aef5fc83d4f19d174"
@@ -5626,6 +5638,14 @@ react-native-vector-icons@^6.1.0:
     lodash "^4.0.0"
     prop-types "^15.6.2"
     yargs "^8.0.2"
+
+react-native-video@^3.2.1:
+  version "3.2.1"
+  resolved "http://registry.npm.taobao.org/react-native-video/download/react-native-video-3.2.1.tgz#7ba3cbdfc5c747b5b00452811e98193824b16ce3"
+  integrity sha1-e6PL38XHR7WwBFKBHpgZOCSxbOM=
+  dependencies:
+    keymirror "0.1.1"
+    prop-types "^15.5.10"
 
 react-native-webview@^3.0.0:
   version "3.1.2"

@@ -5,6 +5,8 @@ import MoviesScreen from '../views/movies';
 import DetailsScreen from '../views/details';
 import AppInfo from '../components/common/appInfo';
 import WeiXinAuth from '../views/user/weixin';
+import VideosSimple from '../views/videos/simple';
+import VideosRtmp from '../views/videos/rtmp';
 
 const AppNavigator = createStackNavigator(
   {
@@ -12,7 +14,9 @@ const AppNavigator = createStackNavigator(
     Movies: MoviesScreen,
     Details: DetailsScreen,
     AppInfo,
-    WeiXinAuth
+    WeiXinAuth,
+    VideosSimple,
+    VideosRtmp
   },
   {
     initialRouteName: 'Hello',

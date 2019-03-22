@@ -1,13 +1,13 @@
 package club.mastershu.kalis.zbmdx;
 
 import android.app.Application;
-import android.content.Intent;
 import android.os.Handler;
 import android.util.Log;
 
 import club.mastershu.kalis.zbmdx.invokenative.DplusReactPackage;
 import club.mastershu.kalis.zbmdx.invokenative.RNUMConfigure;
 import com.facebook.react.ReactApplication;
+import com.brentvatne.react.ReactVideoPackage;
 import com.reactnativecommunity.webview.RNCWebViewPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
@@ -21,6 +21,7 @@ import com.umeng.message.IUmengRegisterCallback;
 import com.umeng.message.MsgConstant;
 import com.umeng.message.PushAgent;
 import com.umeng.socialize.PlatformConfig;
+import com.perrystreetsoftware.RNRtmpViewPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -43,6 +44,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new ReactVideoPackage(),
+            new RNRtmpViewPackage(),
             new DplusReactPackage(),
             new RNCWebViewPackage(),
             new VectorIconsPackage(),
